@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giftbox Customization</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f6f5ef;
+            color: #333;
+        }
+
+        header {
+            background-color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            display: flex;
+            margin: 20px auto;
+            max-width: 1200px;
+            padding: 0 20px;
+        }
+
+        .filters {
+            flex: 1;
+            margin-right: 20px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .filters h3 {
+            color: #6e4c1e;
+        }
+
+        .filters label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .filters select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        .filters .delete-filters {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .filters .delete-filters button {
+            background-color: #6e4c1e;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .main-content {
+            flex: 3;
+        }
+
+        .product-item {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .product-item img {
+            max-width: 100px;
+            height: auto;
+            margin-bottom: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .product-item img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Box It Yourself!</h1>
+    <p>Your configurator for individual gift boxes</p>
+</header>
+
+<div class="container">
+    <div class="filters">
+        <h3>Filters</h3>
+        
+        <label>Occasion:
+            <select>
+                <option>All</option>
+                <option>Birthday</option>
+                <option>Anniversary</option>
+                <option>Christmas</option>
+                <option>Thank You</option>
+                <option>Recovery Cheer-Up</option>
+                <option>Birth</option>
+                <option>Marriage</option>
+            </select>
+        </label>
+
+        <div class="price-slider">
+            <label for="price">Price Range:</label>
+            <input type="range" id="price" name="price" min="0" max="100" value="50">
+            <span>€50</span>
+        </div>
+
+        <label>Gender:
+            <select>
+                <option>All</option>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Unisex</option>
+            </select>
+        </label>
+
+        <label>Product Types:
+            <select>
+                <option>All</option>
+                <option>Snacks</option>
+                <option>Technique Tools</option>
+                <option>Sports</option>
+                <option>Clothes</option>
+                <option>Drinks</option>
+            </select>
+        </label>
+
+        <label>Ingredients:
+            <select>
+                <option>All</option>
+                <option>Vegan</option>
+                <option>Alcohol Free</option>
+                <option>High Protein</option>
+                <option>Low Sugar</option>
+            </select>
+        </label>
+
+        <div class="delete-filters">
+            <button>Delete All Filters</button>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <!-- AI Tool -->
+        <div class="ai-tool">
+            <h3>Use AI and create a box with your own ideas</h3>
+            <textarea rows="3" placeholder="Describe your ideal gift box..."></textarea>
+            <button>Create with AI</button>
+            <div class="ai-generated">
+                <h4>Example Gift Boxes</h4>
+                <div class="giftbox-item">
+                    <p>Romantic Evening Set</p>
+                </div>
+                <div class="giftbox-item">
+                    <p>Relaxation & Spa Kit</p>
+                </div>
+                <div class="giftbox-item">
+                    <p>Gourmet Treats Selection</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 1 -->
+        <div class="step">
+            <h2>Step 1: Choose Your Products</h2>
+            <div class="products">
+                <div class="product-item">
+                    <img src="images/chocolate-gift.jpg" alt="Chocolate Gift Set">
+                    <p>Chocolate Gift Set</p>
+                </div>
+                <div class="product-item">
+                    <img src="images/luxury-candle.jpg" alt="Luxury Candle">
+                    <p>Luxury Candle</p>
+                </div>
+                <div class="product-item">
+                    <img src="images/gourmet-snacks.jpg" alt="Gourmet Snacks">
+                    <p>Gourmet Snacks</p>
+                </div>
+                <div class="product-item">
+                    <img src="images/tea-selection.jpg" alt="Tea Selection">
+                    <p>Tea Selection</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step">
+            <h2>Step 2: Design & Choose Your Package</h2>
+            <div class="design-options">
+                <label>Color:
+                    <select>
+                        <option>Red</option>
+                        <option>Blue</option>
+                        <option>Green</option>
+                    </select>
+                </label>
+                <label>Package Type:
+                    <select>
+                        <option>Basket</option>
+                        <option>Box</option>
+                        <option>Bag</option>
+                    </select>
+                </label>
+            </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="step">
+            <h2>Step 3: Personalize Your Gift</h2>
+            <div class="personalize">
+                <label>Choose a Card:
+                    <select>
+                        <option>Birthday</option>
+                        <option>Thank You</option>
+                        <option>Anniversary</option>
+                    </select>
+                </label>
+                <label>Add a Message:
+                    <textarea rows="4" placeholder="Write your message here..."></textarea>
+                </label>
+            </div>
+        </div>
+
+        <!-- Summary -->
+        <div class="step">
+            <h2>Your Final Giftbox Preview</h2>
+            <div class="summary">
+                <p>Product Overview:</p>
+                <ul>
+                    <li>Chocolate Gift Set</li>
+                    <li>Luxury Candle</li>
+                </ul>
+                <p>Personalization Overview:</p>
+                <ul>
+                    <li>Card: Thank You</li>
+                    <li>Message: "You're amazing!"</li>
+                </ul>
+                <p class="total-price">Total Price: €50</p>
+
+                <div class="buttons">
+                    <button>Add to Cart</button>
+                    <button>Order Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
